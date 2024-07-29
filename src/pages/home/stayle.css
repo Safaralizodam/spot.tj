@@ -1,0 +1,128 @@
+.swiper-container {
+  width: 100%;
+  margin-left: -17px;
+  height: 100vh;
+  z-index: 0;
+  top: -245px;
+  position: relative;
+  margin-bottom: 600px;
+}
+
+.mySwiper {
+  width: 102%;
+  margin-left: -16px;
+  height: 110vh; /* Adjust height as needed */
+}
+
+.swiper-slide {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-top, .overlay-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 30%; /* Adjust height of gradient overlay */
+  background: linear-gradient(to top, rgba(2, 2, 2, 0.747), transparent);
+}
+
+.overlay-top {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(2, 2, 2, 0.771), transparent);
+}
+
+.overlay-bottom {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(2, 2, 2, 0.792), transparent);
+}
+
+.slide-content {
+  position: absolute;
+  top: 67%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.slide-content h1 {
+  width: 65%;
+  text-align: start;
+  font-size: 60px; /* Adjust as needed */
+  margin-bottom: 1rem;
+  transition: font-size 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.slide-content h1:hover {
+  font-size: 62px; /* Slight increase on hover */
+  color: #a1a1a1; /* Example hover color */
+}
+
+.swiper-scrollbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%; /* Full height of the Swiper container */
+  width: 10px; /* Adjust scrollbar width */
+  background: transparent; /* Scrollbar background color */
+  z-index: 10; /* Ensure it’s above other elements */
+}
+
+.swiper-scrollbar-drag {
+  background: transparent; /* Scrollbar drag color */
+}
+
+.slide-btn {
+  padding: 13px 30px;
+  margin-left: -550px;
+  background-color: rgba(255, 43, 43, 0.962);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.slide-btn:hover {
+  background-color: rgba(202, 4, 4, 0.747);
+  transform: scale(1.05); /* Slight increase on hover */
+}
+
+.img2 {
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+}
+@media (max-width: 1024px) {
+  .swiper-container {
+    height: 100vh; /* Adjust height for tablets */
+  }
+}
+
+@media (max-width: 640px) {
+  .swiper-container {
+    height:  100vh;; /* Adjust height for mobile */
+  }
+
+  .slide-content {
+    width: 140%; /* Increase width on mobile */
+  }
+
+  .slide-content h1 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .slide-content h1:hover {
+    font-size: 1.75rem; /* Slightly increase on hover */
+  }
+}
